@@ -12,5 +12,6 @@
     "eslint.nodePath": "C:\\Users\\I010809\\AppData\\Roaming\\nvm\\v14.16.1\\node_modules\\@sap\\cds-dk\\node_modules",
     "eslint.options": {
         "configFile": "C:\\Users\\I010809\\AppData\\Roaming\\nvm\\v14.16.1\\node_modules\\@sap\\cds-dk\\lib\\lint\\.eslintrc.js"
-    }
+    },
+    "actions": []
 }
