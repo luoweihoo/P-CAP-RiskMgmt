@@ -7,16 +7,19 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^5",
-    "express": "^4"
+    "@sap/xssec": "^3.2.13",
+    "express": "^4",
+    "hdb": "^0.18.3",
+    "passport": "^0.5.2"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.90.12",
     "sqlite3": "^5.0.2"
   },
+  "engines": {
+    "node": "^16"
+  },
   "scripts": {
-    "start": "cds run",
-    "watch-risks": "cds watch --open risks/webapp/index.html#fe-lrop-v4",
-    "watch-mitigations": "cds watch --open mitigations/webapp/index.html#fe-lrop-v4"
+    "start": "cds run"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -43,8 +46,18 @@
       "require-atomic-updates": "off"
     }
   },
-  "sapux": [
-    "app/risks",
-    "app/mitigations"
-  ]
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sql"
+      },
+      "uaa": {
+        "kind": "xsuaa",
+        "credentials": {}
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
 }
